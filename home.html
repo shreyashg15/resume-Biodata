@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    
+    
+    <style>
+        body {
+            background-color: #2b2a39;
+            color: #eee1e1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .profiles {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+        .profile {
+            width: 200px;
+            height: 250px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .profile:hover {
+            transform: scale(1.1);
+        }
+        .profile img {
+            width: 80%;
+            border-radius: 50%;
+        }
+        .profile-name {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Student</h1>
+        <div class="profiles">
+            <div class="profile" onclick="showProfile(0)">
+                <img src="ksl.jpg" >
+                
+            </div>
+           
+            <div class="profile" onclick="showProfile(1)">
+                <img src="tejas.jpg" alt="Profile 2">
+            </div>
+            <div class="profile" onclick="showProfile(2)">
+                <img src="sru.jpg" alt="Profile 3">
+            </div>
+            <div class="profile"onclick="showProfile(3)">
+                <img src="sri.jpg" alt="Profile 4">
+            </div>
+            <div class="profile"onclick="showProfile(4)">
+                <img src="shre.jpg" alt="Profile 5">
+            </div>
+            <div class="profile" onclick="showProfile(5)">
+                <img src="sid.jpg" alt="Profile 6">
+            </div>
+        </div>
+        <p> &nbsp; Sudeep&nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  Tejas &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  Srujan&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; Srinidhi&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shreyas&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Siddu </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #040404 0%, #141414 100%);
+            color: #c12929;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(115, 39, 202, 0));
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 4%;
+            transition: background-color 0.4s;
+        }
+
+        .navbar.scrolled {
+            background-color: #6029c7;
+        }
+
+        .navbar h1 {
+        
+            color: #afafb7;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .main-container {
+            padding: 120px 4% 50px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background: linear-gradient(to bottom, rgba(44, 29, 92, 0.9), rgba(0,0,0,0.9));
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(65, 48, 136, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(68, 32, 128, 0.2);
+        }
+
+        .section h2 {
+            color: #a1262f;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+       
+
+        .resume-content img {
+            max-width: 1000%;
+            height: 500px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease;
+        }
+
+        .resume-content img:hover {
+            transform: scale(1.05);
+        }
+
+        .bio-content {
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .bio-content h3 {
+            color: #E50914;
+            margin: 20px 0 15px;
+            font-size: 1.5rem;
+        }
+
+        .bio-content p {
+            color: #e4dcdc;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+     
+        .category-tag {
+            display: inline-block;
+            background-color: rgba(229,9,20,0.2);
+            color: #712327;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+        .section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            background: linear-gradient(45deg, rgba(229,9,20,0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section:hover::after {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 100px 20px 30px;
+            }
+            
+            .resume-content img {
+                max-width: 90%;
+            }
+
+            .navbar h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>SRUJAN T S</h1>
+    </nav>
+
+    <div class="main-container">
+        <section class="section" id="resume">
+            <h2>Resume</h2>
+            <div class="resume-content">
+                <img src="srur.jpg">
+            </div>
+        </section>
+        <section class="section" id="bio">
+            <h2>Bio Data</h2>
+            <div class="bio-content">
+                
+                <p>Name:Srujan T S</p>
+                <p>Email:srujansathish964@gmail.com</p>
+                <p>Qualification:B.E(computer science engineering)</p>
+                <p>Phone:7795089196</p>
+                <p>place:Bengaluru</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
